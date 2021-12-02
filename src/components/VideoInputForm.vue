@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/2">
+  <div class="w-full md:w-1/2">
     <label for="input-video">{{ isLoading ? "読み込み中..." : "動画を選択" }}</label>
     <input
       type="file"
@@ -7,7 +7,7 @@
       @change="handleFileSelect"
     />
     
-    <video controls v-if="src">
+    <video controls v-if="src" class="w-full">
       <source :src="src" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
     </video>
   </div>
